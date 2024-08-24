@@ -1,0 +1,439 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 16px;
+	--color-headline: #fff;
+	--color-text: #E0E0E0;
+	/* --color-text: #ddc4a4; */
+	--color-bg: #121212;
+	--color-link: #656565;
+	--color-link-hover: #fff;
+	--page-padding: 2rem 1.8rem;
+}
+
+body {
+	margin: 0;
+	color: var(--color-text);
+	background-color: var(--color-bg);
+	font-family: area-normal,-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
+}
+
+.demo-1 {
+	background-image: linear-gradient(
+	  180deg,
+	  hsl(240deg 91% 49%) 0%,
+	  hsl(252deg 93% 47%) 10%,
+	  hsl(258deg 93% 46%) 20%,
+	  hsl(263deg 93% 46%) 30%,
+	  hsl(266deg 91% 45%) 40%,
+	  hsl(269deg 88% 45%) 50%,
+	  hsl(272deg 78% 43%) 60%,
+	  hsl(275deg 69% 40%) 70%,
+	  hsl(277deg 60% 37%) 80%,
+	  hsl(294deg 74% 43%) 90%, 
+	  hsl(258deg 76% 45%) 100%
+	);
+}
+
+.pink-blob {
+	width: 350px;
+	position: absolute;
+	top: -19vh;
+    left: 18vw;
+    z-index: 0;
+}
+
+.npm {
+	--color-text: #ffffff;
+    --color-bg: #0e0e0e;
+    --color-link: #ede3e3;
+    --color-link-hover: #d68521;
+}
+
+/* Page Loader */
+.js .loading::before,
+.js .loading::after {
+	content: '';
+	position: fixed;
+	z-index: 1000;
+}
+
+.js .loading::before {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--color-bg);
+}
+
+.js .loading::after {
+	top: 50%;
+	left: 50%;
+	width: 60px;
+	height: 60px;
+	margin: -30px 0 0 -30px;
+	border-radius: 50%;
+	opacity: 0.4;
+	background: var(--color-link);
+	animation: loaderAnim 0.7s linear infinite alternate forwards;
+
+}
+
+@keyframes loaderAnim {
+	to {
+		opacity: 1;
+		transform: scale3d(0.5,0.5,1);
+	}
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-link);
+	outline: none;
+	cursor: pointer;
+}
+
+a:hover {
+	color: var(--color-link-hover);
+	outline: none;
+}
+
+/* Better focus styles from https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
+a:focus {
+	/* Provide a fallback style for browsers
+	 that don't support :focus-visible */
+	outline: none;
+	background: lightgrey;
+}
+
+a:focus:not(:focus-visible) {
+	/* Remove the focus indicator on mouse-focus for browsers
+	 that do support :focus-visible */
+	background: transparent;
+}
+
+a:focus-visible {
+	/* Draw a very noticeable focus style for
+	 keyboard-focus on browsers that do support
+	 :focus-visible */
+	outline: 2px solid red;
+	background: transparent;
+}
+
+main {
+	counter-reset: section;
+}
+
+.splitting .word {
+	white-space: nowrap;
+}
+
+.navigation-container {
+	color: var(--color-title);
+	padding: var(--page-padding);
+	margin-bottom: 3rem;
+	font-weight: 900;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.top-menu {
+	display: flex;
+	justify-content: flex-end;
+	gap: 0.75rem;
+}
+
+.frame a:not(.frame__title-back),
+.line {
+	white-space: nowrap;
+	overflow: hidden;
+	position: relative;
+}
+
+.frame a:not(.frame__title-back)::before,
+.line::before {
+	content: '';
+	height: 1px;
+	width: 100%;
+	background: currentColor;
+	position: absolute;
+	top: 90%;
+	transition: transform 0.3s;
+	transform-origin: 0% 50%;
+}
+
+.frame a:not(.frame__title-back):hover::before,
+.line:hover::before {
+	transform: scaleX(0);
+	transform-origin: 100% 50%;
+}
+
+.frame__title {
+	grid-area: title;
+	display: flex;
+	align-items: center;
+}
+
+.frame__title-main {
+	font-size: 1rem;
+	margin: 0;
+	font-weight: normal;
+}
+
+.frame__title-back {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+}
+
+.frame__title-back svg {
+	fill: currentColor;
+}
+
+.frame__prev {
+	grid-area: prev;
+	align-self: start;
+}
+
+.frame__demos {
+	display: flex;
+	gap: 1rem;
+}
+
+.frame__demos span {
+	opacity: 0.7;
+}
+
+.intro {
+	height: 50vh;
+	display: grid;
+	place-items: center;
+	margin: 0 auto;
+	padding: var(--page-padding);
+}
+
+.intro__title {
+	margin: 0;
+	line-height: 1.4;
+	font-weight: 400;
+	text-align: left;
+	position: relative;
+	max-width: 80vw;
+	color: var(--color-headline);
+}
+
+.intro__title-sub {
+	font-size: clamp(1rem,6vw,2.75rem);
+	position: relative;
+	z-index: 1;
+	font-family: 'Iowan Old Style BT', sans-serif;
+	letter-spacing: -0.05em;
+	text-shadow: 1px 2px 10px black;
+}
+
+.intro__info {
+	position: relative;
+	max-width: 20ch;
+	opacity: 0.6;
+	line-height: 1.2;
+	margin-bottom: 4rem;
+	padding-bottom: 1rem;
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.intro__info::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	width: 1px;
+	height: 2rem;
+	background: #fff;
+	top: 100%;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	position: relative;
+	padding:var(--page-padding);
+}
+
+.content:last-child {
+	padding-bottom: 40vh;
+}
+
+.content--full {
+	padding: 0;
+}
+
+.content p {
+	max-width: 575px;
+	/* max-width: 80vw; */
+	margin: 1.5rem auto;
+	font-size: 1.15rem;
+	line-height: 1.5;
+	font-weight: 600;
+}
+
+.content--highlight p {
+	font-size: clamp(1rem,3vw,2rem);
+}
+
+.content__title {
+	font-size: 12vw;
+	line-height: 0.8;
+	text-align: left;
+	display: grid;
+	gap: 2rem;
+}
+
+.content__title--left {
+	text-align: left;
+}
+
+.content__title--right {
+	text-align: right;
+}
+
+.content__title::before {
+	font-weight: 400;
+	font-family: area-normal, sans-serif;
+	display: block;
+	font-size: 1rem;
+	margin-bottom: 10vh;
+	text-align: center;
+}
+
+.content__title--sides {
+	display: grid;
+	grid-template-rows: auto auto;
+	grid-template-columns: 100%;
+	text-align: left;
+	gap: 2rem;
+}
+
+.content__title--sides span:last-child {
+	justify-self: end;
+}
+
+.font-3 {
+	font-family: area-normal, sans-serif;
+	font-weight: 600;
+}
+
+.font-height {
+	line-height: 1.4;
+}
+
+.font-height-medium {
+	line-height: 0.9;
+}
+
+.font-medium {
+	font-size: 6vw;
+	margin-top: 3rem;
+}
+
+.font-larger {
+	font-size: 27vw;
+}
+
+.font-upper {
+	text-transform: uppercase;
+}
+
+.font-sub {
+	font-size: 5vw;
+	margin-top: 2rem;
+    display: block;
+}
+
+.splitting .font-sub .word {
+	display: grid;
+	grid-auto-flow: column;
+}
+
+.char-wrap {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+}
+
+
+@font-face {
+    font-family: 'Iowan Old Style BT';
+    font-style: normal;
+    font-weight: normal;
+	src: local('Iowan Old Style BT'), url('../assets/iowan-font/iowan-old-style-bt.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Bitstream Iowan Old Style Italic BT';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Bitstream Iowan Old Style Italic BT'), url('../assets/iowan-font/iowan-old-style-italic-bt.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Bitstream Iowan Old Style Bold BT';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Bitstream Iowan Old Style Bold BT'), url('../assets/iowan-font/iowan-old-style-bold-bt.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Bitstream Iowan Old Style Bold Italic BT';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Bitstream Iowan Old Style Bold Italic BT'), url('../assets/iowan-font/iowan-old-style-bold-italic-bt.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Bitstream Iowan Old Style Black BT';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Bitstream Iowan Old Style Black BT'), url('../assets/iowan-font/iowan-old-style-black-bt.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Bitstream Iowan Old Style Black Italic BT';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Bitstream Iowan Old Style Black Italic BT'), url('../assets/iowan-font/iowan-old-style-black-italic-bt.woff') format('woff');
+    }
+
+@media screen and (min-width: 53em) {
+	.frame__demos {
+		justify-self: right;
+	}
+
+	.intro {
+		max-width: 35vw;
+	}
+	.intro__title {
+		line-height: 1.2;
+		text-align: center;
+	}
+	.pink-blob {
+		width: 500px;
+		top: -25vh;
+		left: 15vw;
+	}	
+	.content__title {
+		/* text-align: center; */
+	}
+}
