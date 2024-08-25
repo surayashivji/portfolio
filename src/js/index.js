@@ -2,7 +2,8 @@ import {preloadFonts} from './utils';
 import Lenis from '@studio-freight/lenis'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
 import Splitting from "splitting";
@@ -70,6 +71,35 @@ const scroll = () => {
     });
 };
 
+// Smooth scroll function
+const smoothScroll = () => {
+    const links = document.querySelectorAll('a[data-scroll-to]');
+    
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                gsap.to(window, {
+                    duration: 1,
+                    scrollTo: {
+                        y: targetElement,
+                        offsetY: 50
+                    },
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        // Remove the hash from the URL without affecting the browser history
+                        history.replaceState('', document.title, window.location.pathname + window.location.search);
+                    }
+                });
+            }
+        });
+    });
+};
+
+
 // Preload images and fonts
 preloadFonts('cvn8slu').then(() => {
     // Remove loader (loading class)
@@ -78,4 +108,6 @@ preloadFonts('cvn8slu').then(() => {
     initSmoothScrolling();
     // GSAP Scroll Triggers
     scroll();
+    // Initialize smooth scroll
+    smoothScroll();
 });
