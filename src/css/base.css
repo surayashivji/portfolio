@@ -322,6 +322,10 @@ main {
 	font-weight: 600;
 }
 
+.content p.contact-body {
+	/* font-size: 3rem; */
+  }
+
 .content--highlight p {
 	font-size: clamp(1rem,3vw,2rem);
 }
@@ -333,14 +337,6 @@ main {
 	display: grid;
 	gap: 2rem;
 	margin-bottom: 300px;
-}
-
-.content__title--left {
-	text-align: left;
-}
-
-.content__title--right {
-	text-align: right;
 }
 
 .content__title::before {
