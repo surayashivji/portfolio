@@ -217,6 +217,10 @@ main {
   overflow: hidden;
 }
 
+.intro-creative {
+  margin: 0 auto;
+}
+
 .intro__title {
   z-index: 1;
   max-width: 80vw;
@@ -271,10 +275,6 @@ main {
   position: relative;
 }
 
-.content:last-child {
-  padding-bottom: 40vh;
-}
-
 .content--full {
   padding: 0;
 }
@@ -287,17 +287,32 @@ main {
   line-height: 1.6;
 }
 
-.content--highlight p {
+.content p.contact-body, .content--highlight p {
   font-size: clamp(1rem, 3vw, 2rem);
+}
+
+.about-body {
+  margin: 0;
+}
+
+.inline-link {
+  color: #fff;
 }
 
 .content__title {
   text-align: left;
   gap: 2rem;
-  margin-bottom: 300px;
   font-size: 12vw;
   line-height: .8;
   display: grid;
+}
+
+.content__title__links {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
 }
 
 .content__title:before {
@@ -413,6 +428,10 @@ main {
 
   .intro {
     max-width: 35vw;
+  }
+
+  .intro-creative {
+    max-width: 45vw;
   }
 
   .intro__title {
