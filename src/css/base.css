@@ -26,26 +26,9 @@ body {
   overflow-x: hidden;
 }
 
-.demo {
-  background-image: linear-gradient(
-    180deg,
-    hsl(240deg 91% 49%) 0%,
-    hsl(252deg 93% 47%) 10%,
-    hsl(258deg 93% 46%) 20%,
-    hsl(263deg 93% 46%) 30%,
-    hsl(266deg 91% 45%) 40%,
-    hsl(269deg 88% 45%) 50%,
-    hsl(272deg 78% 43%) 60%,
-    hsl(275deg 69% 40%) 70%,
-    hsl(277deg 60% 37%) 80%,
-    hsl(294deg 74% 43%) 90%,
-    hsl(258deg 76% 45%) 100%
-  );
-}
-
 .pink-blob {
   position: absolute;
-  width: 100%; /* Adjust as needed */
+  width: 100%;
   max-width: 350px;
   top: 90%;
   left: 70%;
