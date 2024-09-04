@@ -1,45 +1,70 @@
-.portfolio-grid {
-  max-width: 80vw;
-  margin: 40px auto 0;
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.portfolio-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* This creates horizontal spacing between items */
+  margin-bottom: 20px; /* This creates vertical spacing between rows */
 }
 
 .portfolio-item {
-  width: calc(25% - 15px); /* For 4 items per row */
-  margin-bottom: 20px;
+  box-sizing: border-box;
 }
 
-.portfolio-item video,
-.portfolio-item img {
+/* Default item width (4 items per row) */
+.portfolio-item {
+  width: calc(25% - 15px); /* (20px * 3) / 4 = 15px */
+}
+
+/* 3 items per row */
+.row-3 .portfolio-item {
+  width: calc(33.333% - 13.33px); /* (20px * 2) / 3 = 13.33px */
+}
+
+/* 2 items per row */
+.row-2 .portfolio-item {
+  width: calc(50% - 10px); /* 20px / 2 = 10px */
+}
+
+/* 1 item per row */
+.row-1 .portfolio-item {
+  width: 100%;
+}
+
+.portfolio-item img,
+.portfolio-item video {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: contain;
-}
-
-@media (max-width: 1200px) {
-  .portfolio-item {
-    width: calc(33.333% - 20px); /* 3 items per row */
-  }
-}
-
-@media (max-width: 1024px) {
-  .portfolio-item {
-    width: calc(50% - 15px); /* 2 items per row */
-  }
 }
 
 @media (max-width: 768px) {
-  .portfolio-grid {
-    max-width: 90vw;
-  }
-  
+  /* 2 items per row for default (4-item) rows */
   .portfolio-item {
     width: calc(50% - 10px);
+  }
+  
+  /* 1 item per row for 3-item, 2-item, and 1-item rows */
+  .row-3 .portfolio-item,
+  .row-2 .portfolio-item,
+  .row-1 .portfolio-item {
+    width: 100%;
   }
 }
 
 @media (max-width: 480px) {
-  .portfolio-grid {
-    max-width: 95vw;
+  /* Maintain 2 items per row for default (4-item) rows */
+  .portfolio-item {
+    width: calc(50% - 10px);
+  }
+  
+  /* Ensure all other layouts are 1 item per row */
+  .row-3 .portfolio-item,
+  .row-2 .portfolio-item,
+  .row-1 .portfolio-item {
+    width: 100%;
   }
 }
