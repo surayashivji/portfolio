@@ -91,7 +91,8 @@ body {
 }
 
 a {
-  color: var(--color-link);
+  color: #fff;
+  opacity: .4;
   cursor: pointer;
   outline: none;
   text-decoration: none;

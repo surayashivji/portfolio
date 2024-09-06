@@ -45,8 +45,8 @@ body {
   .pink-blob {
     width: 26vw;
     max-width: 505px;
-    top: 20%; /* Adjust for desktop */
-    left: 80%; /* Adjust for desktop */
+    top: 20%;
+    left: 80%;
     transform: translate(-50%, -50%);
   }
 }
@@ -98,7 +98,9 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--color-link);
+  /* color: var(--color-link); */
+  color: #ffffff;
+  opacity: 0.4;
   outline: none;
   cursor: pointer;
 }
