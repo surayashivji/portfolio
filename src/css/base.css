@@ -448,7 +448,25 @@ main {
       format("woff");
 }
 
-@media screen and (min-width: 53em) {
+@media screen and (min-width: 53em) and (max-width: 1199px) {
+  .frame__demos {
+    justify-self: right;
+  }
+
+  .intro {
+    max-width: 60vw;
+  }
+  .intro-creative {
+    max-width: 70vw;
+    padding-bottom: 100px;
+  }
+  .intro__title {
+    line-height: 1.2;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .frame__demos {
     justify-self: right;
   }
@@ -463,8 +481,5 @@ main {
   .intro__title {
     line-height: 1.2;
     text-align: center;
-  }
-  .content__title {
-    /* text-align: center; */
   }
 }

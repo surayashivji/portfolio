@@ -418,7 +418,27 @@ main {
   src: local(Bitstream Iowan Old Style Black Italic BT), url("iowan-old-style-black-italic-bt.9e88554e.woff") format("woff");
 }
 
-@media screen and (width >= 53em) {
+@media screen and (width >= 53em) and (width <= 1199px) {
+  .frame__demos {
+    justify-self: right;
+  }
+
+  .intro {
+    max-width: 60vw;
+  }
+
+  .intro-creative {
+    max-width: 70vw;
+    padding-bottom: 100px;
+  }
+
+  .intro__title {
+    text-align: center;
+    line-height: 1.2;
+  }
+}
+
+@media screen and (width >= 1200px) {
   .frame__demos {
     justify-self: right;
   }
