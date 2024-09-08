@@ -242,7 +242,7 @@ main {
 .intro__title {
   position: relative;
   z-index: 1;
-  max-width: 80vw;
+  max-width: 85vw;
 }
 
 @media (min-width: 768px) {
@@ -255,7 +255,7 @@ main {
 }
 
 .intro__title-sub {
-  font-size: clamp(1rem, 6vw, 2.75rem);
+  font-size: clamp(1.5rem, 6.5vw, 2.75rem);
   position: relative;
   z-index: 1;
   font-family: "Iowan Old Style BT", sans-serif;
@@ -319,7 +319,8 @@ main {
 }
 
 .inline-link {
-  color: #ffffff;
+  color: #FF8BE8;
+  opacity: 1;
 }
 
 .content__title {
@@ -328,6 +329,7 @@ main {
   text-align: left;
   display: grid;
   gap: 2rem;
+  padding: var(--page-padding);
 }
 
 .content__title__links {
