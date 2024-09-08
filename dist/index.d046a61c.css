@@ -215,8 +215,9 @@ main {
 }
 
 .intro-creative {
-  margin: 0 auto;
   padding-bottom: 50px;
+  padding: var(--page-padding);
+  margin: 0 auto;
 }
 
 .intro__title {
@@ -266,7 +267,6 @@ main {
 }
 
 .content {
-  padding: var(--page-padding);
   flex-direction: column;
   width: 100vw;
   display: flex;
