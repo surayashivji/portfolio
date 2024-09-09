@@ -51,12 +51,6 @@ body {
   display: none;
 }
 
-@media (width <= 767px) {
-  .about-body br.mobile-only {
-    display: inline;
-  }
-}
-
 .js .loading:before, .js .loading:after {
   content: "";
   z-index: 1000;
@@ -377,6 +371,16 @@ main {
   display: inline-block;
   position: relative;
   overflow: hidden;
+}
+
+@media (width <= 767px) {
+  .about-body br.mobile-only {
+    display: inline;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
 }
 
 @font-face {

@@ -55,12 +55,6 @@ body {
   display: none;
 }
 
-@media (max-width: 767px) {
-  .about-body br.mobile-only {
-    display: inline;
-  }
-}
-
 /* Page Loader */
 .js .loading::before,
 .js .loading::after {
@@ -402,6 +396,16 @@ main {
   display: inline-block;
   position: relative;
   overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .about-body br.mobile-only {
+    display: inline;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
 }
 
 @font-face {
