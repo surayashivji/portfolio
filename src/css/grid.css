@@ -41,6 +41,7 @@
   display: block;
 }
 
+
 @media (max-width: 768px) {
   /* 2 items per row for default (4-item) rows */
   .portfolio-item {
@@ -66,5 +67,25 @@
   .row-2 .portfolio-item,
   .row-1 .portfolio-item {
     width: 100%;
+  }
+}
+
+/* Hide both images by default */
+.responsive-image-container img {
+  display: none;
+}
+
+/* Show the mobile image on mobile devices */
+.responsive-image-container .mobile-only-image {
+  display: block;
+}
+
+/* Media query for desktop devices */
+@media (min-width: 768px) {
+  .responsive-image-container .desktop-only-image {
+    display: block;
+  }
+  .responsive-image-container .mobile-only-image {
+    display: none;
   }
 }

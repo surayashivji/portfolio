@@ -52,4 +52,22 @@
     width: 100%;
   }
 }
+
+.responsive-image-container img {
+  display: none;
+}
+
+.responsive-image-container .mobile-only-image {
+  display: block;
+}
+
+@media (width >= 768px) {
+  .responsive-image-container .desktop-only-image {
+    display: block;
+  }
+
+  .responsive-image-container .mobile-only-image {
+    display: none;
+  }
+}
 /*# sourceMappingURL=index.d573a284.css.map */

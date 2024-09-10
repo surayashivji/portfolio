@@ -222,7 +222,7 @@ main {
   display: grid;
   place-items: center;
   margin: 0 auto;
-  padding: var(--page-padding);
+  /* padding: var(--page-padding); */
   overflow: hidden; /* This will prevent the blob from creating scrollbars */
 }
 
@@ -230,7 +230,7 @@ main {
   margin: 0 auto;
   padding-bottom: 50px;
   /* remove */
-  padding: var(--page-padding); 
+  /* padding: var(--page-padding);  */
 }
 
 .intro__title {
@@ -283,7 +283,7 @@ main {
   flex-direction: column;
   width: 100vw;
   position: relative;
-  /* padding: var(--page-padding); */
+  padding: var(--page-padding);
 }
 
 .content--full {
@@ -323,7 +323,7 @@ main {
   text-align: left;
   display: grid;
   gap: 2rem;
-  padding: var(--page-padding);
+  /* padding: var(--page-padding); */
 }
 
 .content__title__links {
@@ -407,6 +407,8 @@ main {
     font-size: 1rem;
   }
 }
+
+
 
 @font-face {
   font-family: "Iowan Old Style BT";
