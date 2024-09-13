@@ -74,18 +74,20 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
           <section class="intro-creative">
             <div class="intro__title">
               <div class="intro__title-sub">
-                This is an archive of work, from launched products to art.
+                This is an archive of work, from launched products to artwork.
               </div>
             </div>
           </section>
 
           <!-- Row with 2 items -->
           <div class="portfolio-row row-2">
+
             <div class="portfolio-item">
-              <video autoplay="" loop="" muted="" playsinline="" poster="/HAGSOnboarding_poster.ed1086cc.jpg">
-                <source src="/HAGSOnboarding.9af80022.mp4" type="video/mp4">
+              <video class="lazy-video" autoplay="" loop="" muted="" playsinline="" poster="/HAGSOnboarding_poster.ed1086cc.jpg" data-src="./assets/HAGSOnboarding.mp4">
+                Your browser does not support the video tag.
               </video>
             </div>
+
             <div class="portfolio-item">
               <video autoplay="" loop="" muted="" playsinline="" poster="/HAGS_GBM_poster.82de3634.jpg">
                 <source src="/HAGS_ReadWrite.c886640b.mp4" type="video/mp4">
@@ -240,6 +242,12 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
             <div class="portfolio-item responsive-image-container">
               <img class="desktop-only-image" src="/Nexus6.f0ae8a34.jpg" alt="Hags">
               <img class="mobile-only-image" src="/NexusMobile4.888a8637.jpeg" alt="Hags">
+            </div>
+          </div>
+
+          <div class="portfolio-row row-1">
+            <div class="portfolio-item responsive-image-container">
+              <img class="mobile-only-image" src="/NexusMobile6.0491445e.jpeg" alt="Hags">
             </div>
           </div>
         </section>

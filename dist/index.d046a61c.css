@@ -207,6 +207,21 @@ main {
   overflow: hidden;
 }
 
+.portfolio-item video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.lazy-video {
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+video:not(.lazy-video) {
+  opacity: 1;
+}
+
 .intro-creative {
   margin: 0 auto;
   padding-bottom: 50px;

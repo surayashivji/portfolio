@@ -9,7 +9,9 @@ import "splitting/dist/splitting-cells.css";
 import Splitting from "splitting";
 
 Splitting();
+
 const fadeTextBody = [...document.querySelectorAll('.content__title[data-splitting][data-effect16]')];
+
 
 // Lenis smooth scrolling
 let lenis;
@@ -98,7 +100,6 @@ const smoothScroll = () => {
         });
     });
 };
-
 
 // Preload images and fonts
 preloadFonts('cvn8slu').then(() => {
