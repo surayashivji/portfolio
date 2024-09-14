@@ -301,11 +301,6 @@ video:not(.lazy-video) {
   margin: 0;
 }
 
-.inline-link {
-  color: #ff8be8;
-  opacity: 1;
-}
-
 .content__title {
   text-align: left;
   gap: 2rem;
@@ -394,6 +389,10 @@ video:not(.lazy-video) {
   .content p {
     font-size: 1rem;
   }
+}
+
+.inline-link {
+  opacity: 1;
 }
 
 @font-face {

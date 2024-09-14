@@ -327,11 +327,6 @@ video:not(.lazy-video) {
   margin: 0; /* Remove default margin */
 }
 
-.inline-link {
-  color: #FF8BE8;
-  opacity: 1;
-}
-
 .content__title {
   font-size: 12vw;
   line-height: 0.8;
@@ -423,6 +418,12 @@ video:not(.lazy-video) {
   }
 }
 
+
+.inline-link {
+  /* color: #FF8BE8; */
+  /* text-decoration: underline; */
+  opacity: 1;
+}
 
 
 @font-face {
