@@ -94,6 +94,7 @@ a {
 
 a:hover {
   color: var(--color-link-hover);
+  opacity: 1;
   outline: none;
 }
 
