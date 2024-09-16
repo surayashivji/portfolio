@@ -234,7 +234,10 @@
                 playsinline
                 poster="../src/assets/posters/HAGSIntro_poster.jpg"
               >
-                <source data-src="https://res.cloudinary.com/dstm2kqvs/video/upload/v1726451448/HAGSIntro_mw1cvo.mp4" type="video/mp4" />
+                <source
+                  data-src="https://res.cloudinary.com/dstm2kqvs/video/upload/v1726451448/HAGSIntro_mw1cvo.mp4"
+                  type="video/mp4"
+                />
               </video>
             </div>
             <div class="portfolio-item">
@@ -265,7 +268,10 @@
                 playsinline
                 poster="../src/assets/posters/HagsSpin_poster.jpg"
               >
-                <source data-src="https://res.cloudinary.com/dstm2kqvs/video/upload/v1726451550/HagsSpin_dpfozy.mp4" type="video/mp4" />
+                <source
+                  data-src="https://res.cloudinary.com/dstm2kqvs/video/upload/v1726451550/HagsSpin_dpfozy.mp4"
+                  type="video/mp4"
+                />
               </video>
             </div>
             <div class="portfolio-item">
@@ -277,7 +283,10 @@
                 playsinline
                 poster="../src/assets/posters/HAGS_GBM_poster.jpg"
               >
-                <source data-src="https://res.cloudinary.com/dstm2kqvs/video/upload/v1726451393/HAGS_GBM_tqm4qg.mp4" type="video/mp4" />
+                <source
+                  data-src="https://res.cloudinary.com/dstm2kqvs/video/upload/v1726451393/HAGS_GBM_tqm4qg.mp4"
+                  type="video/mp4"
+                />
               </video>
             </div>
             <div class="portfolio-item">
@@ -473,7 +482,7 @@
           <!-- Row with 1 item -->
           <div class="portfolio-row row-1">
             <div class="portfolio-item">
-              <img src="../src/assets/mello.png" alt="Hags" />
+              <img data-src="https://res.cloudinary.com/dstm2kqvs/image/upload/v1726451635/mello_xksftb.png" alt="Hags" />
             </div>
           </div>
 
@@ -495,7 +504,10 @@
                 playsinline
                 poster="../src/assets/posters/HagsSpin_poster.jpg"
               >
-                <source data-src="https://res.cloudinary.com/dstm2kqvs/video/upload/v1726451550/HagsSpin_dpfozy.mp4" type="video/mp4" />
+                <source
+                  data-src="https://res.cloudinary.com/dstm2kqvs/video/upload/v1726451550/HagsSpin_dpfozy.mp4"
+                  type="video/mp4"
+                />
               </video>
             </div>
             <div class="portfolio-item">
@@ -507,7 +519,10 @@
                 playsinline
                 poster="../src/assets/posters/HAGS_GBM_poster.jpg"
               >
-                <source data-src="https://res.cloudinary.com/dstm2kqvs/video/upload/v1726451393/HAGS_GBM_tqm4qg.mp4" type="video/mp4" />
+                <source
+                  data-src="https://res.cloudinary.com/dstm2kqvs/video/upload/v1726451393/HAGS_GBM_tqm4qg.mp4"
+                  type="video/mp4"
+                />
               </video>
             </div>
             <div class="portfolio-item">
@@ -555,7 +570,10 @@
                 playsinline
                 poster="../src/assets/posters/PotterPics_poster.jpg"
               >
-                <source data-src="https://res.cloudinary.com/dstm2kqvs/video/upload/v1726452411/PotterPics_ybv8fx.mp4" type="video/mp4" />
+                <source
+                  data-src="https://res.cloudinary.com/dstm2kqvs/video/upload/v1726452411/PotterPics_ybv8fx.mp4"
+                  type="video/mp4"
+                />
               </video>
             </div>
           </div>
@@ -572,7 +590,7 @@
               <img
                 class="mobile-only-image"
                 class="lazy"
-                src="../src/assets/NexusMobile4.jpeg"
+                data-src="https://res.cloudinary.com/dstm2kqvs/image/upload/v1726452390/NexusMobile4_uakzfe.jpg"
                 alt="Hags"
               />
             </div>
@@ -626,12 +644,62 @@
     <script type="module" src="js/index.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/yall-js@3.2.0/dist/yall.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        yall({
-          observeChanges: true,
+        const lazyElements = document.querySelectorAll(".lazy");
+
+        lazyElements.forEach((element) => {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                if (element.tagName === "IMG") {
+                  // If it's an image
+                  console.log(element);
+                  if (element.dataset.src) {
+                    element.src = element.dataset.src; // Assign data-src to img src
+                  }
+                  if (element.dataset.srcset) {
+                    element.srcset = element.dataset.srcset; // Assign data-srcset to img srcset
+                  }
+                } else if (element.tagName === "VIDEO") {
+                  // If it's a video
+                  // console.log("seen video", entry);
+                  if (element.dataset.src) {
+                    element.src = element.dataset.src; // Assign data-src to video src
+                  }
+
+                  const sources = element.querySelectorAll("source");
+                  sources.forEach((source) => {
+                    if (source.dataset.src) {
+                      source.src = source.dataset.src; // Assign data-src to source src
+                    }
+                    if (source.dataset.srcset) {
+                      source.srcset = source.dataset.srcset; // Assign data-srcset to source srcset
+                    }
+                  });
+
+                  element.load(); // Load video after src is set
+                } else if (element.tagName === "SOURCE") {
+                  // If it's a source tag
+                  if (element.dataset.src) {
+                    element.src = element.dataset.src; // Assign data-src to source src
+                  }
+                  if (element.dataset.srcset) {
+                    element.srcset = element.dataset.srcset; // Assign data-srcset to source srcset
+                  }
+
+                  const video = element.closest("video");
+                  if (video) {
+                    video.load(); // Load video after src is set
+                  }
+                }
+
+                observer.unobserve(element); // Stop observing once loaded
+              }
+            });
+          });
+
+          observer.observe(element);
         });
       });
     </script>
