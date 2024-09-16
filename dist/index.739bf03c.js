@@ -670,31 +670,6 @@ const smoothScroll = ()=>{
         });
     });
 };
-document.addEventListener("DOMContentLoaded", ()=>{
-    const lazyVideos = document.querySelectorAll("video.lazy-video");
-    if ("IntersectionObserver" in window) {
-        const videoObserver = new IntersectionObserver((entries, observer)=>{
-            entries.forEach((entry)=>{
-                if (entry.isIntersecting) {
-                    const video = entry.target;
-                    video.src = video.dataset.src;
-                    video.load();
-                    video.classList.remove("lazy-video");
-                    videoObserver.unobserve(video);
-                    video.addEventListener("loadeddata", ()=>{
-                        video.play().catch(console.error);
-                    });
-                }
-            });
-        });
-        lazyVideos.forEach((video)=>videoObserver.observe(video));
-    } else // Fallback for browsers that don't support IntersectionObserver
-    lazyVideos.forEach((video)=>{
-        video.src = video.dataset.src;
-        video.load();
-        video.classList.remove("lazy-video");
-    });
-});
 // Preload images and fonts
 (0, _utils.preloadFonts)("cvn8slu").then(()=>{
     // Remove loader (loading class)
