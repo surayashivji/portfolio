@@ -1,0 +1,18 @@
+# Site settings
+title: Suraya Portfolio
+
+# CORS settings
+cors:
+  allowed_origins:
+    - https://surayashivji.com
+
+# GitHub Pages settings
+github:
+  is_project_page: false
+
+# Exclude files from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
