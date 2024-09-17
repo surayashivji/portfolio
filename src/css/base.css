@@ -217,6 +217,10 @@ main {
   opacity: 0.7;
 }
 
+.color-text-snapchat {
+  color: yellow; !important;
+}
+
 .intro {
   position: relative;
   height: 50vh;

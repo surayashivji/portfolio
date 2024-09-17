@@ -80,6 +80,16 @@
   display: block;
 }
 
+.mobile-only-row {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-only-row {
+    display: flex;
+  }
+}
+
 /* Media query for desktop devices */
 @media (min-width: 768px) {
   .responsive-image-container .desktop-only-image {

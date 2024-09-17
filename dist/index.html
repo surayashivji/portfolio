@@ -7,9 +7,9 @@
     <meta name="description" content="Suraya Shivji - Designer, Engineer, and Founder based in New York. Explore my portfolio of creative work in startups, apps, websites, brands, and animations.">
     <meta name="keywords" content="Suraya, Shivji, Designer, Engineer, Founder, Entrepreneur">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Suraya Shivji - Designer and Founder">
+    <meta property="og:title" content="Suraya Shivji">
     <meta property="og:description" content="Suraya Shivji - Designer, Engineer, and Founder based in New York">
-    <meta property="og:image" content="https://res.cloudinary.com/dstm2kqvs/image/upload/v1726520334/ogimage_dd5wud.png">
+    <meta property="og:image" content="https://res.cloudinary.com/dstm2kqvs/image/upload/v1726520782/ogimage_fkdldc.png">
     <meta property="og:url" content="https://surayashivji.com/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="author" content="Suraya Shivji">
@@ -58,7 +58,7 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
             I like to make things — apps, websites, brands, animations. I focus
             on consumer products because I spend a lot of time thinking about
             people. <br><br>
-            Right now, I am at Snap Inc. Before that, I co-founded HAGS, a
+            Right now, I am at <span class="color-text-snapchat">Snap Inc.</span> Before that, I co-founded HAGS, a
             social network for high school students that was later acquired by
             Snap in 2022. I also angel invest and help friends with strategy and
             product.<br><br>
@@ -227,7 +227,7 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 
           <div class="portfolio-row row-3">
             <div class="portfolio-item">
-              <img class="lazy" data-src="https://res.cloudinary.com/dstm2kqvs/image/upload/v1726451330/AirPodsLiveListen_plfqym.png" alt="AirPods Live Listen Feature iOS 12">
+              <img src="https://res.cloudinary.com/dstm2kqvs/image/upload/v1726451330/AirPodsLiveListen_plfqym.png" alt="AirPods Live Listen Feature iOS 12">
             </div>
             <div class="portfolio-item">
               <video class="lazy" autoplay="" loop="" muted="" playsinline="" poster="/iMessageEvents.1d2e2c28.png">
@@ -246,6 +246,18 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
             <div class="portfolio-item responsive-image-container">
               <img class="desktop-only-image lazy" src="https://res.cloudinary.com/dstm2kqvs/image/upload/v1726452212/Nexus6_xxu97b.jpg" alt="Nexus ESL Gaming Website">
               <img class="mobile-only-image lazy" data-src="https://res.cloudinary.com/dstm2kqvs/image/upload/v1726452390/NexusMobile4_uakzfe.jpg" alt="Nexus ESL Gaming Website">
+            </div>
+          </div>
+
+          <div class="mobile-only-row portfolio-row row-1">
+            <div class="portfolio-item responsive-image-container">
+              <img class="mobile-only-image lazy" data-src="https://res.cloudinary.com/dstm2kqvs/image/upload/v1726452384/NexusMobile6_e3cntp.jpg" alt="Nexus ESL Gaming Website">
+            </div>
+          </div>
+
+          <div class="mobile-only-row portfolio-row row-1">
+            <div class="portfolio-item responsive-image-container">
+              <img class="mobile-only-image lazy" data-src="https://res.cloudinary.com/dstm2kqvs/image/upload/v1726522653/NexusMobileLeaderboard_ryhn87.jpg" alt="Nexus ESL Gaming Website">
             </div>
           </div>
         </section>
@@ -276,7 +288,6 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
                 if (entry.isIntersecting) {
                     if (element.tagName === "IMG") {
                         // If it's an image
-                        console.log(element);
                         if (element.dataset.src) element.src = element.dataset.src; // Assign data-src to img src
                         if (element.dataset.srcset) element.srcset = element.dataset.srcset; // Assign data-srcset to img srcset
                     } else if (element.tagName === "VIDEO") {

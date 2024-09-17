@@ -199,6 +199,10 @@ main {
   opacity: .7;
 }
 
+.color-text-snapchat {
+  color: #ff0;
+}
+
 .intro {
   place-items: center;
   height: 50vh;

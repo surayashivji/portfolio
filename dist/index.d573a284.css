@@ -61,6 +61,16 @@
   display: block;
 }
 
+.mobile-only-row {
+  display: none;
+}
+
+@media (width <= 767px) {
+  .mobile-only-row {
+    display: flex;
+  }
+}
+
 @media (width >= 768px) {
   .responsive-image-container .desktop-only-image {
     display: block;

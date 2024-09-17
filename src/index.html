@@ -13,14 +13,14 @@
       content="Suraya, Shivji, Designer, Engineer, Founder, Entrepreneur"
     />
     <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Suraya Shivji - Designer and Founder" />
+    <meta property="og:title" content="Suraya Shivji" />
     <meta
       property="og:description"
       content="Suraya Shivji - Designer, Engineer, and Founder based in New York"
     />
     <meta
       property="og:image"
-      content="https://res.cloudinary.com/dstm2kqvs/image/upload/v1726520334/ogimage_dd5wud.png"
+      content="https://res.cloudinary.com/dstm2kqvs/image/upload/v1726520782/ogimage_fkdldc.png"
     />
     <meta property="og:url" content="https://surayashivji.com/" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -165,7 +165,7 @@
             I like to make things — apps, websites, brands, animations. I focus
             on consumer products because I spend a lot of time thinking about
             people. <br /><br />
-            Right now, I am at Snap Inc. Before that, I co-founded HAGS, a
+            Right now, I am at <span class="color-text-snapchat">Snap Inc.</span> Before that, I co-founded HAGS, a
             social network for high school students that was later acquired by
             Snap in 2022. I also angel invest and help friends with strategy and
             product.<br /><br />
@@ -501,8 +501,7 @@
           <div class="portfolio-row row-3">
             <div class="portfolio-item">
               <img
-                class="lazy"
-                data-src="https://res.cloudinary.com/dstm2kqvs/image/upload/v1726451330/AirPodsLiveListen_plfqym.png"
+                src="https://res.cloudinary.com/dstm2kqvs/image/upload/v1726451330/AirPodsLiveListen_plfqym.png"
                 alt="AirPods Live Listen Feature iOS 12"
               />
             </div>
@@ -549,6 +548,26 @@
               <img
                 class="mobile-only-image lazy"
                 data-src="https://res.cloudinary.com/dstm2kqvs/image/upload/v1726452390/NexusMobile4_uakzfe.jpg"
+                alt="Nexus ESL Gaming Website"
+              />
+            </div>
+          </div>
+
+          <div class="mobile-only-row portfolio-row row-1">
+            <div class="portfolio-item responsive-image-container">
+              <img
+                class="mobile-only-image lazy"
+                data-src="https://res.cloudinary.com/dstm2kqvs/image/upload/v1726452384/NexusMobile6_e3cntp.jpg"
+                alt="Nexus ESL Gaming Website"
+              />
+            </div>
+          </div>
+
+          <div class="mobile-only-row portfolio-row row-1">
+            <div class="portfolio-item responsive-image-container">
+              <img
+                class="mobile-only-image lazy"
+                data-src="https://res.cloudinary.com/dstm2kqvs/image/upload/v1726522653/NexusMobileLeaderboard_ryhn87.jpg"
                 alt="Nexus ESL Gaming Website"
               />
             </div>
@@ -612,7 +631,6 @@
               if (entry.isIntersecting) {
                 if (element.tagName === "IMG") {
                   // If it's an image
-                  console.log(element);
                   if (element.dataset.src) {
                     element.src = element.dataset.src; // Assign data-src to img src
                   }
