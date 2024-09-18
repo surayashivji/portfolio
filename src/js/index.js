@@ -105,9 +105,9 @@ preloadFonts('cvn8slu').then(() => {
     // Remove loader (loading class)
     document.body.classList.remove('loading');
     // Lenis (smooth scrolling)
-    initSmoothScrolling();
+    // initSmoothScrolling();
     // GSAP Scroll Triggers
     scroll();
     // Initialize smooth scroll
-    smoothScroll();
+    // smoothScroll();
 });
