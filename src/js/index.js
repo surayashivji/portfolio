@@ -12,7 +12,6 @@ Splitting();
 
 const fadeTextBody = [...document.querySelectorAll('.content__title[data-splitting][data-effect16]')];
 
-
 // Lenis smooth scrolling
 let lenis;
 
