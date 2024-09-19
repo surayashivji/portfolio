@@ -310,6 +310,24 @@ video:not(.lazy-video) {
   display: grid;
 }
 
+.content__title .word {
+  color: inherit;
+}
+
+.content__title .color-text-snapchat .word, .content__title .color-text-hags .word, .content__title .color-text-music .word {
+  color: #fff;
+}
+
+.content__title a {
+  color: inherit;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.content__title a:hover {
+  opacity: .8;
+}
+
 .content__title__links {
   text-align: center;
   justify-content: center;

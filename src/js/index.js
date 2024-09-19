@@ -64,7 +64,7 @@ const scroll = () => {
             scrollTrigger: {
                 trigger: title,
                 start: 'top bottom-=30%',
-                end: 'center top+=30%',
+                end: 'center top+=50%',
                 scrub: true,
             }
         });

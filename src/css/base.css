@@ -337,6 +337,35 @@ video:not(.lazy-video) {
   /* padding: var(--page-padding); */
 }
 
+.content__title .word {
+  color: inherit; /* This ensures all words inherit the white color by default */
+}
+
+.content__title .color-text-snapchat .word {
+  /* color: #FFFF00; */
+  color: white;
+}
+
+.content__title .color-text-hags .word {
+  /* color: #FFCBA4; */
+  color: white;
+}
+
+.content__title .color-text-music .word {
+  /* color: #FF8BE8; */
+  color: white;
+}
+
+.content__title a {
+  text-decoration: none;
+  color: inherit;
+  opacity: 1.0;
+}
+
+.content__title a:hover {
+  opacity: 0.8;
+}
+
 .content__title__links {
   display: flex;
   justify-content: center; /* Center horizontally */
