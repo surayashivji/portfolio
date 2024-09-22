@@ -678,8 +678,8 @@ const smoothScroll = ()=>{
     // initSmoothScrolling();
     // GSAP Scroll Triggers
     scroll();
-// Initialize smooth scroll
-// smoothScroll();
+    // Initialize smooth scroll
+    smoothScroll();
 });
 
 },{"./utils":"72Dku","@studio-freight/lenis":"ggVJc","gsap":"fPSuC","gsap/ScrollTrigger":"7wnFk","gsap/ScrollToPlugin":"9xJDW","splitting/dist/splitting.css":"3uR7n","splitting/dist/splitting-cells.css":"7jeGL","splitting":"77jB6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"72Dku":[function(require,module,exports) {

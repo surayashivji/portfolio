@@ -109,5 +109,5 @@ preloadFonts('cvn8slu').then(() => {
     // GSAP Scroll Triggers
     scroll();
     // Initialize smooth scroll
-    // smoothScroll();
+    smoothScroll();
 });
