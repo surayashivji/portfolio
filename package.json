@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@studio-freight/lenis": "^0.2.28",
+    "@vercel/speed-insights": "^1.0.12",
     "gsap": "^3.11.4",
     "splitting": "^1.0.6"
   }
