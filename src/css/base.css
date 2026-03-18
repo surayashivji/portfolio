@@ -252,12 +252,12 @@ video:not(.lazy-video) {
 .intro__title {
   position: relative;
   z-index: 1;
-  max-width: 85vw;
+  max-width: 78vw;
 }
 
 @media (min-width: 768px) {
   .intro__title {
-    max-width: 60vw;
+    max-width: 46vw;
   }
   .intro {
     overflow: visible; /* Allow overflow on desktop */
@@ -530,7 +530,7 @@ video:not(.lazy-video) {
   }
 
   .intro {
-    max-width: 35vw;
+    max-width: 30vw;
   }
   .intro-creative {
     max-width: 35vw;
